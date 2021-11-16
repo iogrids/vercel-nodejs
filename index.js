@@ -1,3 +1,4 @@
+/*
 const express = require('express');
 const axios = require('axios');
 const mime = require('mime');
@@ -22,6 +23,7 @@ const getMimeType = url => {
 };
 
 app.get('/', (req, res) => {
+    
     const { url } = req.query; // get url parameter
     if (!url) {
         res.type('text/html');
@@ -61,6 +63,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/*', (req, res) => {
+    
     if (!lastProtoHost) {
         res.type('text/html');
         return res.end("You need to specify <code>url</code> query parameter first");
@@ -79,3 +82,21 @@ app.get('/*', (req, res) => {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
+
+*/
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => res.send('Home Page Route'));
+
+app.get('/about', (req, res) => res.send('About Page Route'));
+
+app.get('/portfolio', (req, res) => res.send('Portfolio Page Route'));
+
+app.get('/contact', (req, res) => res.send('Contact Page Route'));
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
