@@ -1,4 +1,4 @@
-/*
+
 const express = require('express');
 const axios = require('axios');
 const mime = require('mime');
@@ -83,7 +83,7 @@ app.get('/*', (req, res) => {
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
 
-*/
+/*
 
 const express = require('express');
 
@@ -99,4 +99,4 @@ app.get('/contact', (req, res) => res.send('Contact Page Route'));
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`)); */
